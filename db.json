@@ -1,0 +1,22 @@
+{
+  "user": [
+    {
+      "id": "Lijin",
+      "name": "Lijin Wilson",
+      "password": "123456",
+      "email": "lijin@gmail.com",
+      "gender": "male",
+      "role": "",
+      "isactive": false
+    },
+    {
+      "id": "admin",
+      "name": "Admin User",
+      "password": "admin@1234",
+      "email": "admin@in.com",
+      "gender": "male",
+      "role": "admin",
+      "isactive": true
+    }
+  ]
+}

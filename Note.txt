@@ -1,0 +1,78 @@
+                                    ------------- Authentication ----------------
+
+>> Install material UI: ng add @angular/material
+
+>> Creat an common module for material UI
+    * MatInputModule,
+    * MatSelectModule,
+    * MatCardModule,
+    * MatRadioModule,
+    * MatCheckboxModule,
+    * MatTableModule,
+    * MatPaginatorModule,
+    * MatSortModule,
+    * MatDialogModule
+    --> import all to the module.ts
+
+>> import the ReactiveFormsModule,httpClientModule
+
+>> import the ngx-toast: npm install ngx-toastr;
+    -Make some changes in angular.json -- "node_modules/ngx-toastr/toastr.css";
+
+>>create the json server:  json-server --watch db.json
+
+>> create the neccessary component.
+    - home
+    - Login
+    - Register
+    - UpdatePopUp
+    - UserListing
+
+>> create the service - auth
+
+>> create the guard file
+
+>> make routing for the neccessary component
+
+>> Make some changes in the index.html
+
+>> designing the Register // register.component.ts
+    - constructor - create and object of formbuilder
+    - create an schema of userinput
+    - creat an function for Registeration.
+    - 
+>> creat an service for register //auth.service.ts
+    - import the http
+    - creat the 4 service
+        * GetAll()
+        * Getbycode()
+        * Proceedregister()
+        * Updateuser()
+
+>> import the auth service to the register and the router and complete the registration platform
+
+>>  On registration.component.html
+    - styling has done
+    - Add the name of the form and ngsubmit
+        -  [formGroup]="registerform" (ngSubmit)=" proceedregistration()"
+    - add formcontrolname = ""
+        eg: formControlName="name"
+
+>>  On login.component.html 
+    - copy the code from the registration.
+    
+>>  On login.component.ts 
+    - copy the constructor and import sections from the register.component.ts
+    - write the logic for the login
+
+>> add an method in the auth.service.ts
+    - IsloggedIn() and GetUserrole();
+
+>> On authguard.service.ts
+    - import the service, toastr, router
+    - write the logic
+    
+>> On AppRoutingModule.component.ts
+    - canActivate:[AuthGuard] paste it along with the routing path.
+
+>> session.storage.clear() on login constructor

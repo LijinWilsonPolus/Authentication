@@ -1,0 +1,47 @@
+<mat-card>
+    <!-- Header -->
+    <mat-card-header>
+        <h1>User Registration</h1>
+    </mat-card-header>
+    <!-- Form -->
+    <mat-card-content>
+        <form style="display: flex; flex-direction: column;" class="example-form" [formGroup]="registerform"
+            (ngSubmit)=" proceedregistration()">
+            <!-- ID -->
+            <mat-form-field class="example-full-width">
+                <mat-label>User Name</mat-label>
+                <input matInput formControlName="id">
+            </mat-form-field>
+
+            <!-- User Name -->
+            <mat-form-field class="example-full-width">
+                <mat-label>Name</mat-label>
+                <input matInput formControlName="name">
+            </mat-form-field>
+
+            <!-- Password-->
+            <mat-form-field class="example-full-width">
+                <mat-label>Password</mat-label>
+                <input type="password" matInput formControlName="password">
+            </mat-form-field>
+
+            <!-- Email -->
+            <mat-form-field class="example-full-width">
+                <mat-label>Email</mat-label>
+                <input type="email" matInput formControlName="email">
+            </mat-form-field>
+
+            <!-- Radio for genders -->
+            <mat-radio-group formControlName="gender" aria-label="Select an option">
+                <mat-radio-button value="male">Male</mat-radio-button>
+                <mat-radio-button value="female">Female</mat-radio-button>
+            </mat-radio-group>
+
+            <div style="display: flex;flex-direction: row;justify-content: center;">
+                <button style="width: 40%;" mat-raised-button color="primary">Submit</button>
+                <a style="width: 40%; " routerLink="/login" mat-raised-button color="accent">Back to login</a>
+            </div>
+
+
+        </form>
+    </mat-card-content>
